@@ -15,7 +15,7 @@ public class MarkdownParseTest {
     @Test
     public void checkTestFile() throws IOException {
         // test-file.md
-        Path file = Path.of("test-file.md");
+        Path file = Path.of("C:\\Users\\K Patel\\Documents\\GitHub\\CSE15L_SharedGroup\\test-file.md");
         String content = Files.readString(file);
         ArrayList<String> links = MarkdownParse.getLinks(content);
         ArrayList<String> result = new ArrayList<String>() {
@@ -31,7 +31,7 @@ public class MarkdownParseTest {
     @Test
     public void checkTest2() throws IOException {
         // test2.md
-        Path file = Path.of("test2.md");
+        Path file = Path.of("C:\\Users\\K Patel\\Documents\\GitHub\\CSE15L_SharedGroup\\test2.md");
         String content = Files.readString(file);
         ArrayList<String> links = MarkdownParse.getLinks(content);
         ArrayList<String> result = new ArrayList<String>(
@@ -46,7 +46,7 @@ public class MarkdownParseTest {
     @Test
     public void checkTest3() throws IOException {
         // test3.md
-        Path file = Path.of("test3.md");
+        Path file = Path.of("C:\\Users\\K Patel\\Documents\\GitHub\\CSE15L_SharedGroup\\test3.md");
         String content = Files.readString(file);
         ArrayList<String> links = MarkdownParse.getLinks(content);
         ArrayList<String> result = new ArrayList<String>(
@@ -58,7 +58,19 @@ public class MarkdownParseTest {
     @Test
     public void checkTest4() throws IOException {
         // test4.md
-        Path file = Path.of("test4.md");
+        Path file = Path.of("C:\\Users\\K Patel\\Documents\\GitHub\\CSE15L_SharedGroup\\test4.md");
+        String content = Files.readString(file);
+        ArrayList<String> links = MarkdownParse.getLinks(content);
+        ArrayList<String> result = new ArrayList<String>(
+            Arrays.asList("some-thing.html"));
+
+        assertEquals(true, links.equals(result));
+    }
+
+    @Test
+    public void checkTest5() throws IOException {
+        // test4.md
+        Path file = Path.of("C:\\Users\\K Patel\\Documents\\GitHub\\CSE15L_SharedGroup\\test1.md");
         String content = Files.readString(file);
         ArrayList<String> links = MarkdownParse.getLinks(content);
         ArrayList<String> result = new ArrayList<String>(
