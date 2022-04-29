@@ -76,6 +76,7 @@ public class MarkdownParseTest {
         ArrayList<String> result = new ArrayList<String>(
             Arrays.asList("some-thing.html", "https://google.com", "https://google.com"));
 
+            //fixed
         assertEquals(true, links.equals(result));
     }
 }
