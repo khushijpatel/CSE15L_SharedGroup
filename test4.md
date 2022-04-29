@@ -1,4 +1,4 @@
-# test 1 (file with no link) --- Run-time error: out of memory
+# test 1 (file with no link) --- Logic error
 [link1]()
 
 [link2]()
